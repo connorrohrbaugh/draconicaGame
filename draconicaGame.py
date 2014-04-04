@@ -28,7 +28,9 @@ def windowInitializer():
 
   return win
 
-
+#RUNNING GAME & SCORE KEEPER
+# def gameLoop(win, Actor):
+#   wyrmList = []
 
 
 
