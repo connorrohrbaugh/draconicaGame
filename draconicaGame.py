@@ -20,9 +20,11 @@ def distanceBetweenPts(p1,p2):
   return distance(p1.getX(),p1.getY(),p2.getX(),p2.getY()
 
 #IS SOMETHING CLOSE ENOUGH?
-def isCloseEnough(Actor_1, Actor_2):
-#  threshold = 0.5 
-
+def isCloseEnough(witchImg, spiderImg):
+    threshold = 0.5 * witchImg.getWidth() + 0.5 * spiderImg.getWidth()
+    dist = distanceBetweenPts(witchImg.getAnchor(),spiderImg.getAnchor())
+    return (dist < threshold)
+    
 #SETUP WINDOW HERE
 def windowInitializer():
   win = GraphWin("Draconica: The Attack of the Wyrm", 600, 600)
